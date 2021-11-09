@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PersonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +61,12 @@ Route::get('/cekbilangan/{bilangan}', function ($bilangan)  {
 }
 });
 
+Route::get('/person', 'PersonController@index');
+
+
+Route::get('/homepage', function () {
+    return view('home', ["name" => "Khaerunisa Trisania"]);
+});
+
+Route::get('/sendData',[PersonController::class,'sendData']);
 
