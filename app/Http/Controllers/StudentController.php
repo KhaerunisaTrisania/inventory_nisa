@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    //
-    class StudentController extends Controller
-{       private $code = "190613006";
+    //    private $code = "190613006";
         private $name = "Khaerunisa Trisania";
         private $course, $task, $quiz, $mid_term, $final, $grade;
 
@@ -19,4 +17,5 @@ class StudentController extends Controller
      
 
         
+}
 }

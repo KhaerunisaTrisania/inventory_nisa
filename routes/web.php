@@ -61,12 +61,14 @@ Route::get('/cekbilangan/{bilangan}', function ($bilangan)  {
 }
 });
 
-Route::get('/person', 'PersonController@index');
+Route::get('/person', [PersonController::class,'index']);
 
 
 Route::get('/homepage', function () {
     return view('home', ["name" => "Khaerunisa Trisania"]);
 });
 
-Route::get('/sendData',[PersonController::class,'sendData']);
+Route::get('/person/send-data',[PersonController::class,'sendData']);
 
+Route::get('/person/add', [PersonController::class,'add']);
+Route::post('/person/addProcess', [PersonController::class,'addProcess']);
