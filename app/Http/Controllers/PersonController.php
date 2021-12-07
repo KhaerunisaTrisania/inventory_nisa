@@ -32,7 +32,7 @@ class PersonController extends Controller
             'person_name' => 'required|max:30',
         ]
         
-        )
+        );
     }
 
 

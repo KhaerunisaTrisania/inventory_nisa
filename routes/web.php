@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonController;
-
+use App\Http\Controllers\BarangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,3 +72,9 @@ Route::get('/person/send-data',[PersonController::class,'sendData']);
 
 Route::get('/person/add', [PersonController::class,'add']);
 Route::post('/person/addProcess', [PersonController::class,'addProcess']);
+
+
+//untuk request ke url agar dapat diakses di web browser
+Route::get('barang/',[BarangController::class,'index']);
+Route::get('barang/add',[BarangController::class,'add']);
+Route::post('barang/addProcess',[BarangController::class,'addProcess']);
